@@ -5,11 +5,6 @@ from setuptools import setup, find_packages
 import sys
 
 
-if sys.version_info < (3, 6):
-    print('adaptive requires Python 3.6 or above.')
-    sys.exit(1)
-
-
 # Loads _version.py module without importing the whole package.
 def get_version_and_cmdclass(package_name):
     import os
@@ -48,6 +43,7 @@ setup(
     name='adaptive',
     description='Adaptive parallel sampling of mathematical functions',
     version=version,
+    python_requires='>=3.6',
     url='https://adaptive.readthedocs.io/',
     author='Adaptive authors',
     license='BSD',
